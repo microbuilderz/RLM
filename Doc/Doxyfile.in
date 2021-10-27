@@ -1,0 +1,65 @@
+PROJECT_NAME            =   "@CMAKE_PROJECT_NAME@"
+PROJECT_NUMBER          =   @VERSION_MAJOR@.@VERSION_MINOR@.@VERSION_PATCH@
+STRIP_FROM_PATH         =   @PROJECT_SOURCE_DIR@ \
+                            @PROJECT_BINARY_DIR@
+DOXYFILE_ENCODING       =   UTF-8
+PROJECT_BRIEF           =   ""
+INPUT                   =   @doxy_main_page@ \
+                            @PROJECT_SOURCE_DIR@
+EXCLUDE_PATTERNS        =   */@PROJECT_BINARY_DIR@/* \
+                            */@PROJECT_SOURCE_DIR@/cmake-build-debug/* \
+                            */@PROJECT_SOURCE_DIR@/cmake-build-release/* \
+                            */@PROJECT_SOURCE_DIR@/bin/* \
+                            */@PROJECT_SOURCE_DIR@/Doc/* \
+                            */@PROJECT_SOURCE_DIR@/cmake/*
+FILE_PATTERNS           =   *.h *.cpp *.c *.hpp
+RECURSIVE               =   YES
+USE_MDFILE_AS_MAINPAGE  =   @doxy_main_page@
+OUTPUT_DIRECTORY        =   @PROJECT_SOURCE_DIR@/Doc
+CREATE_SUBDIRS          =   YES
+GENERATE_LATEX          =   NO
+ALLOW_UNICODE_NAMES     =   NO
+OUTPUT_LANGUAGE         =   English
+BRIEF_MEMBER_DESC       =   YES
+REPEAT_BRIEF            =   YES
+ALWAYS_DETAILED_SEC     =   NO
+INLINE_INHERITED_MEMB   =   NO
+FULL_PATH_NAMES         =   YES
+SHORT_NAMES             =   NO
+JAVADOC_AUTOBRIEF       =   NO
+MULTILINE_CPP_IS_BRIEF  =   NO
+INHERIT_DOCS            =   YES
+SEPARATE_MEMBER_PAGES   =   NO
+TAB_SIZE                =   4
+OPTIMIZE_OUTPUT_FOR_C   =   NO
+MARKDOWN_SUPPORT        =   YES
+SUBGROUPING             =   YES
+INLINE_GROUPED_CLASSES  =   NO
+INLINE_SIMPLE_STRUCTS   =   NO
+TYPEDEF_HIDES_STRUCT    =   NO
+LOOKUP_CACHE_SIZE       =   0
+EXTRACT_ALL             =   YES
+EXTRACT_PRIVATE         =   YES
+CASE_SENSE_NAMES        =   YES
+CLASS_DIAGRAMS          =   YES
+HAVE_DOT                =   YES
+DOT_NUM_THREADS         =   4
+DOT_FONTNAME            =   Helvetica
+DOT_FONTSIZE            =   10
+CLASS_GRAPH             =   YES
+COLLABORATION_GRAPH     =   YES
+GROUP_GRAPHS            =   YES
+UML_LOOK                =   YES
+UML_LIMIT_NUM_FIELDS    =   10
+INCLUDE_GRAPH           =   YES
+INCLUDED_BY_GRAPH       =   YES
+CALL_GRAPH              =   YES
+CALLER_GRAPH            =   NO
+GRAPHICAL_HIERARCHY     =   YES
+DIRECTORY_GRAPH         =   YES
+DOT_IMAGE_FORMAT        =   svg
+INTERACTIVE_SVG         =   YES
+DOT_GRAPH_MAX_NODES     =   50
+DOT_MULTI_TARGETS       =   YES
+GENERATE_LEGEND         =   YES
+DOT_CLEANUP             =   YES

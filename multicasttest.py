@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+import socket
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.sendto(b'hello world', ('225.100.101.0', 8888))

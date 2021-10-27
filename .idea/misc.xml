@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$/DynamicEnginePlugin" />
+      <file path="$PROJECT_DIR$/EngineManager" />
+      <file path="$PROJECT_DIR$/FixEngine" />
+      <file path="$PROJECT_DIR$/PluginManager" />
+      <file path="$PROJECT_DIR$/SocketClient" />
+      <file path="$PROJECT_DIR$/SocketServer" />
+      <file path="$PROJECT_DIR$/TestStaticPlugin" />
+    </sourceRoots>
+  </component>
+</project>

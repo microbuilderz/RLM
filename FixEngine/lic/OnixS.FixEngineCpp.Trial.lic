@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<license version="1.0">
+  <type>trial</type>
+  <customer>
+    <name>Evaluator</name>
+  </customer>
+  <period>
+    <since>2016-12-28</since>
+    <till>2017-03-30</till>
+  </period>
+  <products>
+    <product id="1" name="OnixS FIX Engine for C++" />
+  </products>
+  <checksum>5D179F993DDD1C48910A9D653C7F585F</checksum>
+</license>

@@ -1,0 +1,23 @@
+MESSAGE(STATUS "Looking for crypto")
+
+FIND_PATH(Crypto_INCLUDE_DIR ssl.h ${INCPATH}/openssl)
+SET(Crypto_NAMES ${Crypto_NAMES} crypto)
+FIND_LIBRARY(Crypto_LIBRARY NAMES ${Crypto_NAMES} HPATHS /usr/lib/x86_64-linux-gnu)
+
+IF (Crypto_LIBRARY AND Crypto_INCLUDE_DIR)
+    SET(Crypto_LIBRARIES ${Crypto_LIBRARY})
+    SET(Crypto_FOUND "YES")
+ELSE (Crypto_LIBRARY AND Crypto_INCLUDE_DIR)
+    SET(Crypto_FOUND "NO")
+ENDIF (Crypto_LIBRARY AND Crypto_INCLUDE_DIR)
+
+IF (Crypto_FOUND)
+    IF (NOT Crypto_FIND_QUIETLY)
+        MESSAGE(STATUS "Found Crypto headers: ${Crypto_INCLUDE_DIR}")
+        MESSAGE(STATUS "Found Crypto library: ${Crypto_LIBRARIES}")
+    ENDIF (NOT Crypto_FIND_QUIETLY)
+ELSE (Crypto_FOUND)
+    IF (Crypto_FIND_REQUIRED)
+        MESSAGE(FATAL_ERROR "Could not find Crypto library")
+    ENDIF (Crypto_FIND_REQUIRED)
+ENDIF (Crypto_FOUND)

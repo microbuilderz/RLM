@@ -1,0 +1,43 @@
+sample RLM
+check adapter configurations
+
+sampel scheme
+             4501(AXA)      4501(AXA)           4500        4500
+        LP                              RLM                        CLIENT
+
+---------------------------------------LP----------------------------------
+LPS :
+        4501    AXA     index 0
+        4502    BNP     index 1
+        4503    CIB     index 2
+
+    start LPs
+            ./FixEngine -p 0 -rl 4500 -m LP
+            ./FixEngine -p 1 -rl 4500 -m LP
+            ./FixEngine -p 2 -rl 4500 -m LP
+
+-----------------------------------CLIENTS---------------------------------
+CLIENTS:
+        Taker1          index0
+        Taker2          index1
+        Taker3          index2
+
+        start CLIENTS
+            ./FixEngine -p 0 -rl 4500 -m CLIENT
+            ./FixEngine -p 1 -rl 4500 -m CLIENT
+            ./FixEngine -p 2 -rl 4500 -m CLIENT
+
+-----------------------------------RLMFIXENGIN------------------------------
+
+RLM:
+    start RLM fixengine for testing purpose
+    ./FixEngine -p 0 -rl 4500 -m RLM
+
+
+
+---------------------------------ENGINEMANAGER------------------------------
+
+ENGINEMANAGER:
+
+    start engine manager
+    ./EngineManager -rl 4500 -p ~/CLionProjects/RLM/bin/plugin/
